@@ -34,9 +34,18 @@ module.exports = function (app) {
 		res.set('Content-Type', 'text/javascript');
 		res.sendfile('./control.js');
 });
-	
-	
-	
+	 app.get('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', function(req, res) {
+			res.set('Content-Type', 'text/javascript');
+			res.sendfile('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js');
+	});	
+	 app.get('/js/jquery.flot.min.js', function(req, res) {
+			res.set('Content-Type', 'text/javascript');
+			res.sendfile('/js/jquery.flot.min.js');
+	});	
+	 app.get('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', function(req, res) {
+			res.set('Content-Type', 'text/javascript');
+			res.sendfile('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js');
+	});		
 	
 	// auth routes
 	/////////////////////////////
