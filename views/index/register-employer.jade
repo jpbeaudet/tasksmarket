@@ -1,0 +1,25 @@
+extends ../layouts/default
+block content
+    .container-fluid
+     h1 Your Dashboard
+      .row
+        .col-md-6
+          .top_create
+            a(href='') Create a new offer      
+        .col-md-6
+          .containder-fluid
+              h2 Find the best offers near you  !
+      .row
+        .col-md-10.no_padding_right
+          .top_wrap
+            .top_left
+                h2 There will be a table listing of all matched request in the db
+            .container-fluid
+              h1 Built a good bootstrap snippet to generate for jade 
+            .top_right
+              a.sett(href='')
+                i.fa.fa-cog
+
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin='anonymous')
+    script(src='/js/jquery.flot.min.js')

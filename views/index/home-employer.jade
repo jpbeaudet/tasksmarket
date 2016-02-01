@@ -1,0 +1,105 @@
+extends ../layouts/default
+block content
+    .container-fluid
+        .row
+          .col-md-6
+            h1 Your Dashboard
+            i Browse the services offers near you
+            br
+          .col-md-6
+            .top_create
+              a(href='') Create a new offer
+            br
+        .row
+          .col-md-10.no_padding_right
+            nav.navbar.navbar-default
+              .container
+                // Brand and toggle get grouped for better mobile display
+                .navbar-header
+                  button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar-collapse-1')
+                    span.sr-only Toggle navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                  a.navbar-brand(href='#') Browse the services offers near :
+                // Collect the nav links, forms, and other content for toggling
+                #navbar-collapse-1.collapse.navbar-collapse
+                  ul.nav.navbar-nav.navbar-right
+                    li
+                      a(href='/profile') My Location
+                    li
+                      a(href='/profile') My Profile
+                    li
+                      a(href='/myjobs') My Jobs
+                    li
+                      a(href='#') Help 
+                    li
+                      a(href='#') Contact
+                    li
+                      a.btn.btn-default.btn-outline.btn-circle.collapsed(data-toggle='collapse', href='#nav-collapse1', aria-expanded='false', aria-controls='nav-collapse1') Categories
+                  ul#nav-collapse1.collapse.nav.navbar-nav.nav-collapse
+                    li
+                      a.btn.btn-default.btn-outline.btn-circle.collapsed(data-toggle='collapse', href='#nav-collapse_domestic', aria-expanded='false', aria-controls='nav-collapse_domestic') Domestic Tasks
+                    li
+                      a.btn.btn-default.btn-outline.btn-circle.collapsed(data-toggle='collapse', href='#nav-collapse_2', aria-expanded='false', aria-controls='nav-collapse_2') Others Task Trees 
+                  ul#nav-collapse_domestic.collapse.nav.navbar-nav.nav-collapse
+                    li
+                      a(href='#') House Cleaning
+                    li
+                      a(href='#') Paint jobs
+                    li
+                      a(href='#') Animal/plants care
+                  ul#nav-collapse_2.collapse.nav.navbar-nav.nav-collapse
+                    li
+                      a(href='#') Other Task Sub-Category 1
+                    li
+                      a(href='#') Other Task Sub-Category 2
+                // /.navbar-collapse
+              // /.container
+            // /.navbar 
+          .panel.panel-default.event
+            .panel-body
+              .rsvp.col-xs-2.col-sm-2
+                i 18
+                i nov
+                .hidden-xs
+                 span.fa.fa-thumbs-up.fa-2x
+                span.fa.fa-thumbs-down.fa-2x
+              .info.col-xs-8.col-sm-7
+                | Event Title
+                .visible-xs Lorem ipsum dolor sit amet, consectetur adipiscing elitero..
+                .hidden-xs
+                  ul.nav.nav-tabs(role='tablist')
+                    li.active(role='presentation')
+                      a(href='#location', aria-controls='location', role='tab', data-toggle='tab') Location
+                    li(role='presentation')
+                      a(href='#profile', aria-controls='profile', role='tab', data-toggle='tab') Profile
+                   // Tab panes
+                  .tab-content
+                    #location.tab-pane.active(role='tabpanel') Location
+                    #profile.tab-pane(role='tabpanel')
+                      | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mattis feugiat sem, eu sagittis libero. Duis non odio ut nibh volutpat tempus eget interdum elit.
+              .author.col-xs-2.col-sm-3
+                .profile-image
+                  img(src='http://api.randomuser.me/portraits/med/men/71.jpg')
+                .profile.hidden-xs
+                  strong Robert White
+                  article Event leader and founder of this group
+
+            
+            
+            
+             
+            .top_wrap
+              .top_left
+                h1 Column
+              .container-fluid
+                h2 Built a good bootstrap snippet to generate for jade 
+              .top_right
+                a.sett(href='')
+                  i.fa.fa-cog
+
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin='anonymous')
+    script(src='/js/jquery.flot.min.js')
+

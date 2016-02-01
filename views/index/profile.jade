@@ -1,0 +1,51 @@
+extends ../layouts/default
+block content
+    .container
+      .row.profile
+        .col-md-3
+          .profile-sidebar
+            // SIDEBAR USERPIC
+            .profile-userpic
+              if avatar
+                img(src="#{avatar}")
+            // END SIDEBAR USERPIC
+            // SIDEBAR USER TITLE
+            .profile-usertitle
+              .profile-usertitle-name
+                b=username
+              .profile-usertitle-job
+                i=jobtitle
+                br
+                p(style='color:grey;')=hourworked                
+            // END SIDEBAR USER TITLE
+            // SIDEBAR BUTTONS
+            .profile-userbuttons
+              button.btn.btn-success.btn-sm(type='button') Follow
+              button.btn.btn-danger.btn-sm(type='button') Message
+            // END SIDEBAR BUTTONS
+            // SIDEBAR MENU
+            .profile-usermenu
+              ul.nav
+                li.active
+                  a(href='#')
+                    i.glyphicon.glyphicon-home
+                    | 							Overview
+                li
+                  a(href='#')
+                    i.glyphicon.glyphicon-user
+                    | 							Account Settings
+                li
+                  a(href='#', target='_blank')
+                    i.glyphicon.glyphicon-ok
+                    | 							Tasks
+                li
+                  a(href='#')
+                    i.glyphicon.glyphicon-flag
+                    | 							Help
+            // END MENU
+        .col-md-9
+          .profile-content
+            | Some user related content goes here...
+
+    br
+    br

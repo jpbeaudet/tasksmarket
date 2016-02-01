@@ -1,0 +1,26 @@
+extends ../layouts/default
+block content
+    .container-fluid
+        .row
+          .col-md-6
+            h1 My Jobs
+            i Browse the services offers near you
+            br
+          .col-md-6
+            .top_create
+              a(href='') Create a new offer
+            br
+        .row
+          .col-md-10.no_padding_right
+            .top_wrap
+              .top_left
+                h2 There will be a table listing of all matched jobs in the db
+              .container-fluid
+                h2 Built a good bootstrap snippet to generate for jade 
+              .top_right
+                a.sett(href='')
+                  i.fa.fa-cog
+
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin='anonymous')
+    script(src='/js/jquery.flot.min.js')

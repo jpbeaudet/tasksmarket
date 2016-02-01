@@ -1,0 +1,17 @@
+extends ../layouts/index
+block content
+    .container-fluid
+     center
+      h1 Welcome to Tasks Market !
+      br
+      .container-fluid
+       &nbsp&nbsp
+       a.btn.btn-lg.btn-primary(href='/login-employee' style='width:30%; height:25%;') I am offering my services !
+       &nbsp&nbsp
+       a.btn.btn-lg.btn-default(href='/login-employer' style='width:30%; height:25%;') I want to hire services  !
+       &nbsp&nbsp
+    
+    // jQuery (necessary for Bootstrap's JavaScript plugins)
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+    // Include all compiled plugins (below), or include individual files as needed
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', integrity='sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==', crossorigin='anonymous')
