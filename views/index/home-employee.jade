@@ -4,7 +4,7 @@ block content
       .row
         .col-md-6(style='margin-left:5%;margin-right:5%;')
           .top_create
-            a(href='') Create a new request  
+            a(href='') Create a new offer  
           br    
       .row
         .col(style='margin-left:5%;margin-right:5%;')
@@ -53,15 +53,33 @@ block content
               // /.navbar-collapse
             // /.container
           // /.navbar
-      .row        
-        .top_wrap(style='margin-left:5%;margin-right:5%;')
-          .top_left
-            h2 There will be a table listing of all matched servies offers in the db
-          .container-fluid
-            h2 Built a good bootstrap snippet to generate for jade 
-          .top_right
-            a.sett(href='')
-              i.fa.fa-cog
+      .panel.panel-default(style='margin-left:4%;margin-right:4%;')
+       .panel-heading Panel heading without title
+       .panel-body         
+        .row
+          .col-md-3
+            .offer.offer-default
+              .offer-content
+                h3.lead
+                  | A default tasks request from employer
+                p
+                  | And a little description.
+                  br
+                  |  and so one
+                                
+      .panel.panel-default(style='margin-left:4%;margin-right:4%;')
+       .panel-heading Panel heading without title
+       .panel-body         
+        .row
+          .col-md-3
+            .offer.offer-default
+              .offer-content
+                h3.lead
+                  | A default tasks request from employer
+                p
+                  | And a little description.
+                  br
+                  |  and so one 
 
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin='anonymous')
