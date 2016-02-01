@@ -38,6 +38,31 @@ exports.pricing = function (req, res) {
    
 };
 
+exports.dashboard = function (req, res) {
+	
+	// Check if logged in 
+    if(!req.user) {
+        res.redirect("/");
+        return;
+    }else{
+    var data = {
+        title: " Tasks Market !"
+
+    };
+    
+    res.render('index/dashboard', data);
+    };
+};
+
+exports.logindashboard = function (req, res) {
+    var data = {
+        title: " Tasks Market !"
+
+    };
+    
+    res.render('index/login-dashboard', data);
+};
+
 exports.employee = function (req, res) {
     var data = {
         title: " Tasks Market !"

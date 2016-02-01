@@ -17,9 +17,11 @@ module.exports = function (app) {
 	app.get('/', index.index);
 	app.get('/contact', index.contact);
 	app.get('/pricing', index.pricing);
+	app.get('/dashboard', index.dashboard);
 	app.get('/home-employee', index.homeemployee);
 	app.get('/home-employer', index.homeemployer);
 	app.get('/myjobs', index.myjobs);
+	app.get('/login-dashboard', index.logindashboard);
 	app.get('/login-employee', index.employee);
 	app.get('/login-employer', index.employer);
 	app.get('/profile', index.profile);	
@@ -75,12 +77,22 @@ module.exports = function (app) {
 	           });
 	        });
 	   });
-	   });	
+	   });
+	
+	app.post('/login-dashboard', passport.authenticate('local'), function(req, res, next) {
+	    req.session.save(function (err) {
+	        if (err) {
+	        	return res.redirect('/', {info: "Sorry. Password and username does not match. Try again."});
+	        	
+	        }
+	        res.redirect('/dashboard');
+	    });
+	});
 	
 	app.post('/login-employee', passport.authenticate('local'), function(req, res, next) {
 	    req.session.save(function (err) {
 	        if (err) {
-	        	return res.redirect('/home-employee', {info: "Sorry. Password and username does not match. Try again."});
+	        	return res.redirect('/login-employee', {info: "Sorry. Password and username does not match. Try again."});
 	        	
 	        }
 	        res.redirect('/home-employee');
@@ -90,7 +102,7 @@ module.exports = function (app) {
 	app.post('/login-employer', passport.authenticate('local'), function(req, res, next) {
 	    req.session.save(function (err) {
 	        if (err) {
-	        	return res.redirect('/home-employee', {info: "Sorry. Password and username does not match. Try again."});
+	        	return res.redirect('/login-employer', {info: "Sorry. Password and username does not match. Try again."});
 	        }
 	        res.redirect('/home-employer');
 	    });
