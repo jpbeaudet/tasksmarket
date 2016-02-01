@@ -15,6 +15,7 @@ module.exports = function (app) {
 	//Main routes
 	///////////////////////////
 	app.get('/', index.index);
+	app.get('/back', index.back);
 	app.get('/home-employee', index.homeemployee);
 	app.get('/home-employer', index.homeemployer);
 	app.get('/myjobs', index.myjobs);
@@ -103,6 +104,7 @@ module.exports = function (app) {
         res.redirect('/');
     });
     });	
+
 	
 	// error handlers
 	/////////////////////////////////

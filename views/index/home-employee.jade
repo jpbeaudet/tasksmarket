@@ -2,16 +2,12 @@ extends ../layouts/default
 block content
     .container-fluid
       .row
-        .col-md-6
-          h1 Your Dashboard
-          i Some meaninful insight here ...
-          br
-        .col-md-6
+        .col-md-6(style='margin-left:5%;margin-right:5%;')
           .top_create
             a(href='') Create a new request  
           br    
       .row
-        .col-md-10.no_padding_right
+        .col(style='margin-left:5%;margin-right:5%;')
           nav.navbar.navbar-default
             .container
               // Brand and toggle get grouped for better mobile display
@@ -56,15 +52,16 @@ block content
                     a(href='#') Other Task Sub-Category 2
               // /.navbar-collapse
             // /.container
-          // /.navbar        
-          .top_wrap
-            .top_left
-                h2 There will be a table listing of all matched servies offers in the db
-            .container-fluid
-              h2 Built a good bootstrap snippet to generate for jade 
-            .top_right
-              a.sett(href='')
-                i.fa.fa-cog
+          // /.navbar
+      .row        
+        .top_wrap(style='margin-left:5%;margin-right:5%;')
+          .top_left
+            h2 There will be a table listing of all matched servies offers in the db
+          .container-fluid
+            h2 Built a good bootstrap snippet to generate for jade 
+          .top_right
+            a.sett(href='')
+              i.fa.fa-cog
 
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin='anonymous')

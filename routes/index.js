@@ -18,11 +18,16 @@ exports.index = function (req, res) {
     res.render('index/index', data);
 };
 
+exports.back = function (req, res) {
+	res.redirect(req.get('referer'));
+};
+
 exports.employee = function (req, res) {
     var data = {
         title: " Tasks Market !"
 
     };
+    
     res.render('index/login-employee', data);
 };
 
