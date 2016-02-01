@@ -148,3 +148,19 @@ exports.homeemployer = function (req, res) {
     res.render('index/home-employer', data);
     } 
 };
+
+exports.messages = function (req, res) {
+	// Check if logged in 
+    if(!req.user) {
+        res.redirect("/");
+        return;
+    }else{
+
+    var data = {
+        title: " Tasks Market !",
+        username: req.user.username
+    
+    };
+    res.render('index/messages', data);
+    }  
+};

@@ -17,6 +17,7 @@ module.exports = function (app) {
 	app.get('/', index.index);
 	app.get('/contact', index.contact);
 	app.get('/pricing', index.pricing);
+	app.get('/messages', index.messages);
 	app.get('/dashboard', index.dashboard);
 	app.get('/home-employee', index.homeemployee);
 	app.get('/home-employer', index.homeemployer);
