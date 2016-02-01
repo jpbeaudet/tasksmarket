@@ -2,6 +2,10 @@
   "name": "Task-market",
   "description": "Node.js application for 2way market",
   "version": "0.0.1",
+    "licenses": [{
+    "type": "MIT",
+    "url": "https://tldrlegal.com/license/mit-license"
+  }],
   "dependencies": {
     "body-parser": "1.13.2",
     "passport" : "0.3.2",
