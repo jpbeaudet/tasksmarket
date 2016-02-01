@@ -24,7 +24,19 @@ module.exports = function (app) {
 	app.get('/login-dashboard', index.logindashboard);
 	app.get('/login-employee', index.employee);
 	app.get('/login-employer', index.employer);
-	app.get('/profile', index.profile);	
+	app.get('/profile', index.profile);
+	
+	//// Scripts
+	//////////////////////////////
+	
+	 app.get('/control.js', function(req, res) {
+		res.set('Content-Type', 'text/javascript');
+		res.sendfile('./control.js');
+});
+	
+	
+	
+	
 	// auth routes
 	/////////////////////////////
 	app.get('/register-employee', function(req, res) {
