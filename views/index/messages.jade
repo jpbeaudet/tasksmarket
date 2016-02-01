@@ -1,0 +1,215 @@
+extends ../layouts/messages
+block content
+    nav.navbar.navbar-default
+      .container
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar-collapse-1')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='#') 
+        // Collect the nav links, forms, and other content for toggling
+        #navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a#loc(href='#') My Location
+            li
+              a(href='/profile') My Profile
+            li
+              a(href='/myjobs') My Jobs
+            li
+              a(href='/contact') Contact/Help
+    .container-fluid
+        .side-body
+          h1 My Messages 
+          p Manage your messages and conversation here !.
+          .container
+            .row
+              .col-md-12
+                h4  Control Panel 
+                .table-responsive
+                  table#mytable.table.table-bordred.table-striped
+                    thead
+                      th
+                        input#checkall(type='checkbox')
+                      th Inbox
+                      th Collapse
+                      th Delete
+                    tbody
+                      tr
+                        td
+                          input.checkthis(type='checkbox')
+                        td Conversation nb 1
+                          .container-fluid
+                            .row
+                              .col-md-8
+                                h2.page-header Conversation
+                                section.comment-list
+                                  // First Comment
+                                  article.row
+                                    .col-md-2.col-sm-2.hidden-xs
+                                      figure.thumbnail
+                                        img.img-responsive(src='http://www.keita-gaming.com/assets/profile/default-avatar-c5d8ec086224cb6fc4e395f4ba3018c2.jpg')
+                                        figcaption.text-center username
+                                    .col-md-10.col-sm-10
+                                      .panel.panel-default.arrow.left
+                                        .panel-body
+                                          header.text-left
+                                            .comment-user
+                                              i.fa.fa-user
+                                              |  That Guy
+                                            time.comment-date(datetime='16-12-2014 01:05')
+                                              i.fa.fa-clock-o
+                                              |  Dec 16, 2014
+                                          .comment-post
+                                            p
+                                              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                          p.text-right
+                                            a.btn.btn-default.btn-sm(href='#')
+                                              i.fa.fa-reply
+                                              |  reply
+                                  // Second Comment Reply
+                                  article.row
+                                    .col-md-2.col-sm-2.col-md-offset-1.col-sm-offset-0.hidden-xs
+                                      figure.thumbnail
+                                        img.img-responsive(src='http://www.keita-gaming.com/assets/profile/default-avatar-c5d8ec086224cb6fc4e395f4ba3018c2.jpg')
+                                        figcaption.text-center username
+                                    .col-md-9.col-sm-9
+                                      .panel.panel-default.arrow.left
+                                        .panel-heading.right Reply
+                                        .panel-body
+                                          header.text-left
+                                            .comment-user
+                                              i.fa.fa-user
+                                              |  That Guy
+                                            time.comment-date(datetime='16-12-2014 01:05')
+                                              i.fa.fa-clock-o
+                                              |  Dec 16, 2014
+                                          .comment-post
+                                            p
+                                              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                          p.text-right
+                                            a.btn.btn-default.btn-sm(href='#')
+                                              i.fa.fa-reply
+                                              |  reply
+                                  // Third Comment
+                                   article.row
+                                     .col-md-10.col-sm-10
+                                        .panel.panel-default.arrow.right
+                                          .panel-body
+                                          header.text-right
+                                             .comment-user
+                                              i.fa.fa-user
+                                              |  That Guy
+                                             time.comment-date(datetime='16-12-2014 01:05')
+                                              i.fa.fa-clock-o
+                                              |  Dec 16, 2014
+                                          .comment-post
+                                            p
+                                              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                          p.text-right
+                                            a.btn.btn-default.btn-sm(href='#')
+                                              i.fa.fa-reply
+                                             |  reply
+                                    .col-md-2.col-sm-2.hidden-xs
+                                      figure.thumbnail
+                                        img.img-responsive(src='http://www.keita-gaming.com/assets/profile/default-avatar-c5d8ec086224cb6fc4e395f4ba3018c2.jpg')
+                                        figcaption.text-center username
+                                  // Fourth Comment
+                                  article.row
+                                    .col-md-2.col-sm-2.hidden-xs
+                                      figure.thumbnail
+                                        img.img-responsive(src='http://www.keita-gaming.com/assets/profile/default-avatar-c5d8ec086224cb6fc4e395f4ba3018c2.jpg')
+                                        figcaption.text-center username
+                                    .col-md-10.col-sm-10.col-xs-12
+                                      .panel.panel-default.arrow.left
+                                        .panel-body
+                                          header.text-left
+                                            .comment-user   
+                                              i.fa.fa-user
+                                               |  That Guy
+                                            time.comment-date(datetime='16-12-2014 01:05')
+                                              i.fa.fa-clock-o
+                                              |  Dec 16, 2014
+                                          .comment-post
+                                            p
+                                              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                          p.text-right
+                                            a.btn.btn-default.btn-sm(href='#')
+                                              i.fa.fa-reply
+                                              |  reply
+                                  // Fifth Comment
+                                  article.row
+                                    .col-md-10.col-sm-10
+                                      .panel.panel-default.arrow.right
+                                        .panel-body
+                                          header.text-right
+                                            .comment-user
+                                              i.fa.fa-user
+                                              |  That Guy
+                                            time.comment-date(datetime='16-12-2014 01:05')
+                                              i.fa.fa-clock-o
+                                              |  Dec 16, 2014
+                                          .comment-post
+                                            p
+                                              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                          p.text-right
+                                            a.btn.btn-default.btn-sm(href='#')
+                                              i.fa.fa-reply
+                                              |  reply
+                                    .col-md-2.col-sm-2.hidden-xs
+                                      figure.thumbnail
+                                       img.img-responsive(src='http://www.keita-gaming.com/assets/profile/default-avatar-c5d8ec086224cb6fc4e395f4ba3018c2.jpg')
+                                       figcaption.text-center username
+
+                                    .col-md-2.col-sm-2.col-md-pull-1.hidden-xs
+                                      figure.thumbnail
+                                       img.img-responsive(src='http://www.keita-gaming.com/assets/profile/default-avatar-c5d8ec086224cb6fc4e395f4ba3018c2.jpg')
+                                       figcaption.text-center username
+                                        .clearfix
+                        td
+                          p(data-placement='top', data-toggle='tooltip', title='Edit')
+                            button.btn.btn-primary.btn-xs#messages Look  
+                              span.glyphicon.glyphicon-pencil
+                        td
+                          p(data-placement='top', data-toggle='tooltip', title='Delete')
+                            button.btn.btn-danger.btn-xs#delete Delete
+                              span.glyphicon.glyphicon-trash
+                      tr
+                        td
+                          input.checkthis(type='checkbox')
+                        td Conversation nb 2
+                        td
+                          p(data-placement='top', data-toggle='tooltip', title='Edit')
+                            button.btn.btn-primary.btn-xs#messages Look
+                              span.glyphicon.glyphicon-pencil
+                        td
+                          p(data-placement='top', data-toggle='tooltip', title='Delete')
+                            button.btn.btn-danger.btn-xs#delete Delete
+                              span.glyphicon.glyphicon-trash
+
+                  .clearfix
+                  ul.pagination.pull-right
+                    li.disabled
+                      a(href='#')
+                        span.glyphicon.glyphicon-chevron-left
+                    li.active
+                      a(href='#') 1
+                    li
+                      a(href='#') 2
+                    li
+                      a(href='#') 3
+                    li
+                      a(href='#') 4
+                    li
+                      a(href='#') 5
+                    li
+                      a(href='#')
+                        span.glyphicon.glyphicon-chevron-right
+                  .clearfix                        
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin='anonymous')
+    script(src='/app/control.js')
+    script(src='/js/jquery.flot.min.js')
