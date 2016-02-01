@@ -18,8 +18,24 @@ exports.index = function (req, res) {
     res.render('index/index', data);
 };
 
-exports.back = function (req, res) {
-	res.redirect(req.get('referer'));
+exports.contact = function (req, res) {
+	// Check if logged in 
+    	
+    var data = {
+         title: " Tasks Market !"
+    };	
+    res.render('index/contact', data);
+   
+};
+
+exports.pricing = function (req, res) {
+	// Check if logged in 
+    	
+    var data = {
+         title: " Tasks Market !"
+    };	
+    res.render('index/pricing', data);
+   
 };
 
 exports.employee = function (req, res) {

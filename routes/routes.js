@@ -15,7 +15,8 @@ module.exports = function (app) {
 	//Main routes
 	///////////////////////////
 	app.get('/', index.index);
-	app.get('/back', index.back);
+	app.get('/contact', index.contact);
+	app.get('/pricing', index.pricing);
 	app.get('/home-employee', index.homeemployee);
 	app.get('/home-employer', index.homeemployer);
 	app.get('/myjobs', index.myjobs);
