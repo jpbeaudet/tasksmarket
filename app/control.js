@@ -1,6 +1,9 @@
 var loc = false;
 var ok = true;
+
 (function($){
+	var loc = false;
+	var ok = true;
 	 console.log("jquery start !!!!");	
 	// TODO : Here will go all jquery stuff
 
